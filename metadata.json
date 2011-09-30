@@ -1,0 +1,172 @@
+{
+  "name": "sysctl",
+  "description": "Installs/Configures sysctl",
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
+  "maintainer": "Eric G. Wolfe",
+  "maintainer_email": "wolfe21@marshall.edu",
+  "license": "Apache 2.0",
+  "platforms": {
+    "redhat": ">= 0.0.0",
+    "centos": ">= 0.0.0"
+  },
+  "dependencies": {
+    "oracle": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+    "net/ipv4/ip_forward": {
+      "display_name": "net/ipv4/ip_forward",
+      "description": "0 to disable IP Forwarding, 1 to enable IP forwarding",
+      "default": "0",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "net/ipv4/conf/default/rp_filter": {
+      "display_name": "net/ipv4/conf/default/rp_filter",
+      "description": "Reverse path filtering",
+      "default": "1",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "net/ipv4/conf/default/accept_source_route": {
+      "display_name": "net/ipv4/conf/default/accept_source_route",
+      "description": "Whether or not to accept source route packets",
+      "default": "0",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "kernel/sysrq": {
+      "display_name": "kernel/sysrq",
+      "description": "System Request debugging functionality",
+      "default": "0",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "kernel/core_uses_pid": {
+      "display_name": "kernel/core_uses_pid",
+      "description": "core dumps will append the PID to the filename",
+      "default": "1",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "kernel/ipv4/tcp_syncookies": {
+      "display_name": "kernel/tcp_syncookies",
+      "description": "Controls use of TCP syncookies",
+      "default": "1",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "kernel/msgmnb": {
+      "display_name": "kernel/msgmnb",
+      "description": "maximum size of a message, in bytes",
+      "default": "65536",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "kernel/msgmax": {
+      "display_name": "kernel/msgmax",
+      "description": "default maxmimum size of a mesage queue",
+      "default": "65536",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "kernel/shmmax": {
+      "display_name": "kernel/shmmax",
+      "description": "Maximum shared segment size, in bytes. Defaults to 4294967295",
+      "default": "4294967295",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "kernel/shmall": {
+      "display_name": "kernel/shmall",
+      "description": "maximum number of shared memory segments, in pages",
+      "default": "268435456",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    }
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.0.6"
+}
