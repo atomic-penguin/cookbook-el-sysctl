@@ -86,7 +86,11 @@ net.ipv4.conf.all.arp_announce = <%= node["net"]["ipv4"]["conf"]["all"]["arp_ann
 # disable TCP window tracking for iSCSI
 net.ipv4.netfilter.ip_conntrack_tcp_be_liberal = <%= node["net"]["ipv4"]["netfilter"]["ip_conntrack_tcp_be_liberal"] %>
 <% end -%>
+fs.suid_dumpable = <%= node["fs"]["suid_dumpable"] %>
 
 <% unless node["sysctl"]["vm"]["nr_hugepages"].nil? -%>
 vm.nr_hugepages = <%= node["sysctl"]["vm"]["nr_hugepages"] %>
+<% end -%>
+<% unless node["kernel"]["core_pattern"].nil? -%>
+kernel.core_pattern = <%= node["kernel"]["core_pattern"] %>
 <% end -%>

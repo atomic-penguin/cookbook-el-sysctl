@@ -77,3 +77,14 @@ attribute "kernel/shmall",
   :display_name => "kernel/shmall",
   :description => "maximum number of shared memory segments, in pages",
   :default => "268435456"
+
+attribute "kernel/core_pattern",
+  :display_name => "kernel/core_pattern",
+  :description => "File name pattern for core dumps",
+  :default => "nil"
+
+attribute "fs/suid_dumpable",
+  :display_name => "fs/suid_dumpable",
+  :description => "Processes will (0) not core dump, (1) core dump when possible (2) always core dump but readable by root only",
+  :default => "0"
+

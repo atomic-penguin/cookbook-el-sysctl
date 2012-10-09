@@ -32,6 +32,9 @@ default["kernel"]["msgmnb"] = 65536
 default["kernel"]["msgmax"] = 65536
 default["kernel"]["shmmax"] = 4294967295
 default["kernel"]["shmall"] = 268435456
+default["kernel"]["core_pattern"] = nil
+
+default["fs"]["suid_dumpable"] = 0
 
 default["sysctl"]["is_oracle"] = false
 default["sysctl"]["has_iscsi"] = false

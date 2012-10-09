@@ -37,6 +37,10 @@ ATTRIBUTES:
     - ["msgmax"]: Default maximum size of a message queue, default 65536
     - ["shmmax"]: Maximum shared segment size in bytes, default 4294967295
     - ["shmall"]: Maximum number of shared memory segments in pages, default 268435456
+    - ["core_pattern"]: File pattern for core dumps
+
+  * fs (namespace)
+    - ["suid_dumpable"]: Should processes create core dumps, default nil
 
 USAGE:
 ======
