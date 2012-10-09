@@ -25,6 +25,7 @@ default["net"]["bridge"]["bridge_nf_call_ip6tables"] = 0
 default["net"]["bridge"]["bridge_nf_call_iptables"] = 0
 default["net"]["bridge"]["bridge_nf_call_arptables"] = 0
 default["sysctl"]["vm"]["nr_hugepages"] = nil
+default["sysctl"]["vm"]["swappiness"] = nil
 
 default["kernel"]["sysrq"] = 0
 default["kernel"]["core_uses_pid"] = 1

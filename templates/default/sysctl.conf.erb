@@ -94,3 +94,6 @@ vm.nr_hugepages = <%= node["sysctl"]["vm"]["nr_hugepages"] %>
 <% unless node["kernel"]["core_pattern"].nil? -%>
 kernel.core_pattern = <%= node["kernel"]["core_pattern"] %>
 <% end -%>
+<% unless node["sysctl"]["vm"]["swappiness"].nil? -%>
+vm.swappiness = <%= node["sysctl"]["vm"]["swappiness"] %>
+<% end -%>

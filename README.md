@@ -42,6 +42,10 @@ ATTRIBUTES:
   * fs (namespace)
     - ["suid_dumpable"]: Should processes create core dumps, default nil
 
+  * sysctl["vm"] (namespace)
+    - ["nr_hugepages"]: Number of multiple memory pages, default nil
+    - ["swappiness"]: How aggressively memory pages are swapped to disk, default nil
+
 USAGE:
 ======
 

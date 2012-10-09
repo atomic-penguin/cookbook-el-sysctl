@@ -88,3 +88,12 @@ attribute "fs/suid_dumpable",
   :description => "Processes will (0) not core dump, (1) core dump when possible (2) always core dump but readable by root only",
   :default => "0"
 
+attribute "sysctl/vm/nr_hugepages",
+  :display_name => "sysctl/vm/nr_hugepages",
+  :description => "maximum number of multiple page sizes",
+  :default => "nil"
+
+attribute "sysctl/vm/swappiness",
+  :display_name => "sysctl/vm/swappiness",
+  :description => "how aggressively memory pages are swapped to disk",
+  :default => "nil"
