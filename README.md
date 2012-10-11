@@ -25,9 +25,9 @@ ATTRIBUTES:
     - ["conf"]["default"]["accept_source_route"]: Accept source route packets, default 0
 
   * net["bridge"] (namespace)
-    - ["bridge_nf_call_iptables"]: Pass bridged traffic to iptables, default 0
-    - ["bridge_nf_call_ip6tables"]: Pass bridged ipv6 traffic to iprables, default 0
-    - ["bridge_nf_call_arptables"]: Pass brdiged arp traffic to arptables, default 0
+    - ["bridge_nf_call_iptables"]: Pass bridged traffic to iptables, default nil
+    - ["bridge_nf_call_ip6tables"]: Pass bridged ipv6 traffic to iprables, default nil
+    - ["bridge_nf_call_arptables"]: Pass brdiged arp traffic to arptables, default nil
 
   * kernel (namespace)
     - ["sysrq"]: System request debugging, default 0
@@ -50,6 +50,7 @@ USAGE:
 ======
 
   Set role specific overrides, and add recipe["el-sysctl"] to runlist
+  be sure to modprobre bridge it you get errors regarding the net.bridge.bridge-nf-call* params.
 
 LICENSE AND AUTHOR:
 ===================

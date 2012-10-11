@@ -21,9 +21,9 @@ default["net"]["ipv4"]["ip_forward"] = 0
 default["net"]["ipv4"]["tcp_syncookies"] = 1
 default["net"]["ipv4"]["conf"]["default"]["rp_filter"] = 1
 default["net"]["ipv4"]["conf"]["default"]["accept_source_route"] = 0
-default["net"]["bridge"]["bridge_nf_call_ip6tables"] = 0
-default["net"]["bridge"]["bridge_nf_call_iptables"] = 0
-default["net"]["bridge"]["bridge_nf_call_arptables"] = 0
+default["net"]["bridge"]["bridge_nf_call_ip6tables"] = nil
+default["net"]["bridge"]["bridge_nf_call_iptables"] = nil
+default["net"]["bridge"]["bridge_nf_call_arptables"] = nil
 default["sysctl"]["vm"]["nr_hugepages"] = nil
 default["sysctl"]["vm"]["swappiness"] = nil
 

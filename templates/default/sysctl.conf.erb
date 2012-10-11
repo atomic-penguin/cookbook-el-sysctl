@@ -24,10 +24,16 @@ kernel.core_uses_pid = <%= node["kernel"]["core_uses_pid"] %>
 # Controls the use of TCP syncookies
 net.ipv4.tcp_syncookies = <%= node["net"]["ipv4"]["tcp_syncookies"] %>
 
+<% unless node["net"]["bridge"]["bridge_nf_call_ip6tables"].nil? -%>
 # Disable netfilter on bridges.
-net.bridge.bridge-nf-call-ip6tables = <%= node["net"]["bridge"]["bridge-nf-call-ip6tables"] %>
-net.bridge.bridge-nf-call-iptables = <%= node["net"]["bridge"]["bridge-nf-call-iptables"] %>
-net.bridge.bridge-nf-call-arptables = <%= node["net"]["bridge"]["bridge-nf-call-arptables"] %>
+net.bridge.bridge-nf-call-ip6tables = <%= node["net"]["bridge"]["bridge_nf_call_ip6tables"] %>
+<% end -%>
+<% unless node["net"]["bridge"]["bridge_nf_call_iptables"].nil? -%>
+net.bridge.bridge-nf-call-iptables = <%= node["net"]["bridge"]["bridge_nf_call_iptables"] %>
+<% end -%>
+<% unless node["net"]["bridge"]["bridge_nf_call_arptables"].nil? -%>
+net.bridge.bridge-nf-call-arptables = <%= node["net"]["bridge"]["bridge_nf_call_arptables"] %>
+<% end -%>
 
 # Controls the maximum size of a message, in bytes
 kernel.msgmnb = <%= node["kernel"]["msgmnb"] %>
