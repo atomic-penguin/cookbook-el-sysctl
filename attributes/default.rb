@@ -21,7 +21,11 @@ default["net"]["ipv4"]["ip_forward"] = 0
 default["net"]["ipv4"]["tcp_syncookies"] = 1
 default["net"]["ipv4"]["conf"]["default"]["rp_filter"] = 1
 default["net"]["ipv4"]["conf"]["default"]["accept_source_route"] = 0
+default["net"]["bridge"]["bridge_nf_call_ip6tables"] = nil
+default["net"]["bridge"]["bridge_nf_call_iptables"] = nil
+default["net"]["bridge"]["bridge_nf_call_arptables"] = nil
 default["sysctl"]["vm"]["nr_hugepages"] = nil
+default["sysctl"]["vm"]["swappiness"] = nil
 
 default["kernel"]["sysrq"] = 0
 default["kernel"]["core_uses_pid"] = 1
@@ -29,6 +33,9 @@ default["kernel"]["msgmnb"] = 65536
 default["kernel"]["msgmax"] = 65536
 default["kernel"]["shmmax"] = 4294967295
 default["kernel"]["shmall"] = 268435456
+default["kernel"]["core_pattern"] = nil
+
+default["fs"]["suid_dumpable"] = 0
 
 default["sysctl"]["is_oracle"] = false
 default["sysctl"]["has_iscsi"] = false

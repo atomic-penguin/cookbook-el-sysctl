@@ -28,6 +28,21 @@ attribute "net/ipv4/conf/default/accept_source_route",
   :description => "Whether or not to accept source route packets",
   :default => "0"
 
+attribute "net/bridge/bridge_nf_call_ip6tables",
+  :display_name => "net/bridge/bridge_nf_call_ip6tables",
+  :description => "Pass (1) or don't pass (0) bridged IPv6 traffic to ip6tables' chains.",
+  :default => "0"
+
+attribute "net/bridge/bridge_nf_call_iptables",
+  :display_name => "net/bridge/bridge_nf_call_iptables",
+  :description => "Pass (1) or don't pass (0) bridged IPv4 traffic to iptables' chains.",
+  :default => "0"
+
+attribute "net/bridge/bridge_nf_call_arptables",
+  :display_name => "net/bridge/bridge_nf_call_arptables",
+  :description => "Pass (1) or don't pass (0) bridged ARP traffic to arptables' FORWARD chain. ",
+  :default => "0"
+
 attribute "kernel/sysrq",
   :display_name => "kernel/sysrq",
   :description => "System Request debugging functionality",
@@ -62,3 +77,23 @@ attribute "kernel/shmall",
   :display_name => "kernel/shmall",
   :description => "maximum number of shared memory segments, in pages",
   :default => "268435456"
+
+attribute "kernel/core_pattern",
+  :display_name => "kernel/core_pattern",
+  :description => "File name pattern for core dumps",
+  :default => "nil"
+
+attribute "fs/suid_dumpable",
+  :display_name => "fs/suid_dumpable",
+  :description => "Processes will (0) not core dump, (1) core dump when possible (2) always core dump but readable by root only",
+  :default => "0"
+
+attribute "sysctl/vm/nr_hugepages",
+  :display_name => "sysctl/vm/nr_hugepages",
+  :description => "maximum number of multiple page sizes",
+  :default => "nil"
+
+attribute "sysctl/vm/swappiness",
+  :display_name => "sysctl/vm/swappiness",
+  :description => "how aggressively memory pages are swapped to disk",
+  :default => "nil"

@@ -24,6 +24,11 @@ ATTRIBUTES:
     - ["conf"]["default"]["rp_filter"]: Reverse path filtering, default 1
     - ["conf"]["default"]["accept_source_route"]: Accept source route packets, default 0
 
+  * net["bridge"] (namespace)
+    - ["bridge_nf_call_iptables"]: Pass bridged traffic to iptables, default nil
+    - ["bridge_nf_call_ip6tables"]: Pass bridged ipv6 traffic to iprables, default nil
+    - ["bridge_nf_call_arptables"]: Pass brdiged arp traffic to arptables, default nil
+
   * kernel (namespace)
     - ["sysrq"]: System request debugging, default 0
     - ["core_uses_pid"]: Core dumps append process ID to filename, default 1
@@ -32,11 +37,20 @@ ATTRIBUTES:
     - ["msgmax"]: Default maximum size of a message queue, default 65536
     - ["shmmax"]: Maximum shared segment size in bytes, default 4294967295
     - ["shmall"]: Maximum number of shared memory segments in pages, default 268435456
+    - ["core_pattern"]: File pattern for core dumps
+
+  * fs (namespace)
+    - ["suid_dumpable"]: Should processes create core dumps, default nil
+
+  * sysctl["vm"] (namespace)
+    - ["nr_hugepages"]: Number of multiple memory pages, default nil
+    - ["swappiness"]: How aggressively memory pages are swapped to disk, default nil
 
 USAGE:
 ======
 
   Set role specific overrides, and add recipe["el-sysctl"] to runlist
+  be sure to modprobre bridge it you get errors regarding the net.bridge.bridge-nf-call* params.
 
 LICENSE AND AUTHOR:
 ===================
